@@ -30,6 +30,7 @@ export default function Search() {
             setIsLoading(false)
             } catch (error) {
             setIsLoading(false)
+            setError(error)
             console.error(error)
           }
         }
