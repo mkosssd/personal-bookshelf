@@ -1,0 +1,16 @@
+.header {
+    padding: 10px 0;
+    background-color: #eee;
+}
+.navBtn{
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    background-color: #ccc;
+}
+.flexBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}

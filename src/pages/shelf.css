@@ -1,0 +1,17 @@
+.gridBox {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px; /* optional: for spacing between items */
+}
+
+@media (max-width: 1200px) {
+    .gridBox {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (max-width: 800px) {
+    .gridBox {
+        grid-template-columns: 1fr;
+    }
+}
