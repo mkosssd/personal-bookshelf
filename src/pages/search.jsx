@@ -36,7 +36,7 @@ export default function Search() {
         }
         getBookList()
       },[query])
-      if(!booklist.length) {
+      if(!booklist.length && !isLoading) {
         return (
           <div className='container-mid'>
           <p className='font-weight-bold'>Book not Found</p>
