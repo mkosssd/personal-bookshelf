@@ -1,6 +1,7 @@
 import React from 'react'
 import './card.css'
 export default function Card(props) {
+  // console.log(props);
   console.log(props);
     const prop = props.props
     function addToShelf(prop){

@@ -13,7 +13,6 @@ export default function Shelf() {
     
           try {
             const shelf = JSON.parse(localStorage.getItem('shelf')) || []
-            console.log(shelf)
             if (!shelf) {
               setError('Shelf Is Empty!')
             }

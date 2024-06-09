@@ -23,10 +23,10 @@ export default function Search() {
             const response = await fetch(url, options)
             const result = await response.json()
             const loadedBooks = []
-            for (const key in result) {
+            for (const key in result.docs) {
               loadedBooks.push(result[key])
             }
-            setBooklist(loadedBooks)
+            setBooklist(result.docs)
             setIsLoading(false)
             } catch (error) {
             setIsLoading(false)
@@ -36,14 +36,15 @@ export default function Search() {
         }
         getBookList()
       },[query])
-      if(booklist.length) {
+      if(!booklist.length) {
         return (
           <div className='container-mid'>
           <p className='font-weight-bold'>Book not Found</p>
           </div>
       )
       }
-      const itemQuery = booklist.map(res => <Card props={res} key={res.id}></Card>)
+      console.log(booklist);
+      const itemQuery = booklist.map(res => <Card props={res} key={res}></Card>)
       return (
         <>
           {!isLoading && 
